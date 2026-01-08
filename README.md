@@ -1,6 +1,4 @@
-# AI-enabled-business-management-platform
-
-Enterprise FastAPI Microservice
+# Enterprise FastAPI Microservice
 
 An enterprise-grade FastAPI microservice built with clean architecture, JWT authentication, AI services, analytics, background workers, and Docker support. Designed for scalability, maintainability, and production readiness.
 
@@ -160,10 +158,10 @@ Notes about running: many modules use package-relative imports (e.g. from ..conf
 Configuration lives in app/core/config/settings.py. Several environment variables are read via python-dotenv:
 
 1) DATABASE_URL--database connect string (default
-mysql+asyncmy://root:Siva%40219@localhost:3306/python_service
+    mysql+asyncmy://root:Siva%40219@localhost:3306/python_service
 2) REDIS_URL-- Redis helps achieve performance, scalability, and statelessness
    (redis://localhost:6379/0
-4) JWT_SECRET-- JWT(JSON Web Token) is a stateless authentication mechanism
+3) JWT_SECRET-- JWT(JSON Web Token) is a stateless authentication mechanism
    ( super-secret-jwt-key
 
 Create a .env file at the repository root (optional) with custom values, for example:
@@ -178,5 +176,7 @@ pip install uvicorn
 uvicorn app.ai.model_server:app --host 0.0.0.0 --port 9000 --reload
 
 # /Sending results to backend
-[app/api/send_to_backend.py](http://127.0.0.1:8080/docs#/Auth/register_api_v1_auth_register_post) posts prediction results to the backend configured by BACKEND_API_URL. By default it points to 
-python -m uvicorn app.main:app --reload --port 8080 — ensure a receiving endpoint is available or change the URL.
+[app/api/send_to_backend.py](http://127.0.0.1:8080/docs#/Auth/register_api_v1_auth_register_post) 
+posts prediction results to the backend configured by BACKEND_API_URL. By default it points to 
+python -m uvicorn app.main:app --reload --port 8080
+— ensure a receiving endpoint is available or change the URL.

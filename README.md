@@ -4,60 +4,6 @@ Enterprise FastAPI Microservice
 
 An enterprise-grade FastAPI microservice built with clean architecture, JWT authentication, AI services, analytics, background workers, and Docker support. Designed for scalability, maintainability, and production readiness.
 
-# Project Structure
-
-python-service/
-│
-├── app/
-│   ├── main.py                # FastAPI entry point
-│   │
-│   ├── core/                  # Core utilities
-│   │   ├── config.py          # Environment settings
-│   │   ├── security.py        # JWT, password hashing
-│   │   └── logging.py         # Log configuration
-│   │
-│   ├── api/
-│   │   └── v1/                # API versioning
-│   │       ├── auth.py        # Authentication APIs
-│   │       ├── users.py       # User APIs
-│   │       ├── analytics.py   # Reports & KPIs
-│   │       └── ai.py          # AI prediction APIs
-│   │
-│   ├── models/                # Database models
-│   │   ├── user.py
-│   │   └── business.py
-│   │
-│   ├── schemas/               # Pydantic schemas
-│   │   ├── user.py
-│   │   └── analytics.py
-│   │
-│   ├── services/              # Business logic
-│   │   ├── ai_service.py
-│   │   ├── report_service.py
-│   │   └── automation.py
-│   │
-│   ├── db/                    # Database setup
-│   │   ├── base.py
-│   │   ├── session.py
-│   │   └── init_db.py
-│   │
-│   ├── workers/               # Background workers
-│   │   └── celery_worker.py
-│   │
-│   └── tests/                 # Test cases
-│       ├── test_auth.py
-│       ├── test_users.py
-│       └── test_ai.py
-│
-├── alembic/                   # Database migrations
-├── docker/                    # Docker configuration
-│   ├── Dockerfile
-│   └── docker-compose.yml
-│
-├── .env                       # Environment variables
-├── requirements.txt
-├── pyproject.toml
-└── README.md
 
 # 📦 app/ — Application Root
 This is the main application package. Everything related to the backend logic lives here.
